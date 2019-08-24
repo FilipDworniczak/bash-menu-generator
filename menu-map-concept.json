@@ -1,0 +1,34 @@
+{
+  "settings": {
+    "exitKey": "exit"
+  },
+  "navigation": {
+    "afterSelectionMessage": "Witaj. Wybierz opcję: ",
+    "execute": "",
+    "options": {
+      "dynamic": {},
+      "choices": [
+        {
+          "entryKey": "1",
+          "message": "Download videos",
+          "afterSelectionMessage": "Provide id of video that you want to download: ",
+          "execute": "./get-yt-id-list.sh",
+          "options": {
+            "dynamic": {
+              "executeParamName": "YT_ID",
+              "execute": "./download.sh"
+            },
+            "choices": []
+          }
+        },
+        {
+          "entryKey": "2",
+          "message": "Opcja2",
+          "afterSelectionMessage": "Opcja2. Wybierz opcję: ",
+          "execute": "./option2.sh",
+          "options": {"dynamic": {}, "choices": []}
+        }
+      ]
+    }
+  }
+}
