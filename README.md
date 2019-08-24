@@ -10,7 +10,7 @@ Generates bash menu based on provided JSON menu map
     "afterSelectionMessage": "Witaj. Wybierz opcję: ",
     "execute": "",
     "options": {
-      "dynamic": {},
+      "dynamicChoice": {},
       "choices": [
         {
           "entryKey": "1",
@@ -18,7 +18,7 @@ Generates bash menu based on provided JSON menu map
           "afterSelectionMessage": "Provide id of video that you want to download: ",
           "execute": "./get-yt-id-list.sh",
           "options": {
-            "dynamic": {
+            "dynamicChoice": {
               "executeParamName": "YT_ID",
               "execute": "./download.sh"
             },
@@ -30,7 +30,7 @@ Generates bash menu based on provided JSON menu map
           "message": "Opcja2",
           "afterSelectionMessage": "Opcja2. Wybierz opcję: ",
           "execute": "./option2.sh",
-          "options": {"dynamic": {}, "choices": []}
+          "options": {"dynamicChoice": {}, "choices": []}
         }
       ]
     }
@@ -40,7 +40,7 @@ Generates bash menu based on provided JSON menu map
 ~~~
 ## Structure
 ```
-class BashMenuStructure {
+class MenuMap {
   Settings settings;
   Choice navigation;
 }
@@ -55,10 +55,10 @@ class Choice {
   Options options;
 }
 class Options {
-  Dynamic dynamic?;
+  DynamicChoice dynamicChoice?;
   List<Choice> choices?;
 }
-class Dynamic {
+class DynamicChoice {
   String executeParamName;
   String execute;
 }

@@ -1,3 +1,5 @@
 # Idea
 *.iml
 *.idea
+out/
+target/

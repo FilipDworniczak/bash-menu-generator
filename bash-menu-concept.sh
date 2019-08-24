@@ -39,9 +39,9 @@ function Choice_root() {
 function Choice_1() {
     # {{navigation.options.choices[0].execute}}
     ./get-yt-id-list.sh
-    # read -e -p "{{navigation.options.choices[0].afterSelectionMessage}}" {{navigation.options.choices[0].options.dynamic.executeParamName}}
+    # read -e -p "{{navigation.options.choices[0].afterSelectionMessage}}" {{navigation.options.choices[0].options.dynamicChoice.executeParamName}}
     read -e -p "Provide id of video that you want to download: " YT_ID
-    # {{navigation.options.choices[0].options.dynamic.execute}} ${{navigation.options.choices[0].options.dynamic.executeParamName}}
+    # {{navigation.options.choices[0].options.dynamicChoice.execute}} ${{navigation.options.choices[0].options.dynamicChoice.executeParamName}}
     ./download.sh $YT_ID
 }
 # 2:
@@ -68,7 +68,7 @@ function Choice_2() {
                 # Choice_{{navigation.options.choices[1].options.choices[1].entryKey}}}
                 Choice_2
             # elif [[ $bmg_navigation_input_{{navigation.options.choices[1].entryKey}} = "{{navigation.settings.exitKey}}" ]]; then
-            elif [[ $bmg_navigation_input_{{navigation.options.choices[1].entryKey}} = "exit" ]]; then
+            elif [[ $bmg_navigation_input_2 = "exit" ]]; then
                 exit
             else
                 echo "Please choose an option"
