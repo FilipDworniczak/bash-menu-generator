@@ -1,6 +1,6 @@
 package pl.fdworniczak.bashmenugenerator.model;
 
 public class MenuMap {
-    Settings settings;
-    Choice navigation;
+    public Settings settings;
+    public Choice navigation;
 }

@@ -1,6 +1,6 @@
 package pl.fdworniczak.bashmenugenerator.model;
 
 public class DynamicChoice {
-    String executeParamName;
-    String execute;
+    public String executeParamName;
+    public String execute;
 }

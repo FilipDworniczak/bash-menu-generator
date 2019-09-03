@@ -3,6 +3,6 @@ package pl.fdworniczak.bashmenugenerator.model;
 import java.util.List;
 
 public class Options {
-    DynamicChoice dynamicChoice;
-    List<Choice> choices;
+    public DynamicChoice dynamicChoice;
+    public List<Choice> choices;
 }

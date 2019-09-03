@@ -4,9 +4,9 @@ import lombok.Getter;
 
 @Getter
 public class Choice {
-    String entryKey;
-    String message;
-    String afterSelectionMessage;
-    String execute;
-    Options options;
+    public String entryKey;
+    public String message;
+    public String afterSelectionMessage;
+    public String execute;
+    public Options options;
 }

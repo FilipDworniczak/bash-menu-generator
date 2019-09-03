@@ -3,6 +3,7 @@
     "exitKey": "exit"
   },
   "navigation": {
+    "entryKey": "root",
     "afterSelectionMessage": "Witaj. Wybierz opcję: ",
     "execute": "",
     "options": {

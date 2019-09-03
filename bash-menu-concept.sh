@@ -14,19 +14,19 @@ function Choice_root() {
         # echo "..."
         # echo "{{navigation.settings.exitKey}} - Exit"
         echo "exit - Exit"
-        # read -e -p "{{navigation.afterSelectionMessage}}" bmg_navigation_input
-        read -e -p "Witaj. Wybierz opcję: " bmg_navigation_input
-        if [[ ! -z "$bmg_navigation_input" ]]; then
-            # if [[ $bmg_navigation_input = "{{navigation.options.choices[0].entryKey}}" ]]; then
-            if [[ $bmg_navigation_input = "1" ]]; then
+        # read -e -p "{{navigation.afterSelectionMessage}}" bmg_choice
+        read -e -p "Witaj. Wybierz opcję: " bmg_choice_root
+        if [[ ! -z "$bmg_choice_root" ]]; then
+            # if [[ $bmg_choice = "{{navigation.options.choices[0].entryKey}}" ]]; then
+            if [[ $bmg_choice_root = "1" ]]; then
                 # Choice_{{navigation.options.choices[0].entryKey}}
                 Choice_1
-            # elif [[ $bmg_navigation_input = "{{navigation.options.choices[1].entryKey}}" ]]; then
-            elif [[ $bmg_navigation_input = "2" ]]; then
+            # elif [[ $bmg_choice = "{{navigation.options.choices[1].entryKey}}" ]]; then
+            elif [[ $bmg_choice_root = "2" ]]; then
                 # Choice_{{navigation.options.choices[1].entryKey}}
                 Choice_2
-            # elif [[ $bmg_navigation_input = "{{navigation.settings.exitKey}}" ]]; then
-            elif [[ $bmg_navigation_input = "exit" ]]; then
+            # elif [[ $bmg_choice = "{{navigation.settings.exitKey}}" ]]; then
+            elif [[ $bmg_choice_root = "exit" ]]; then
                 exit
             else
                 echo "Please choose an option"
@@ -55,20 +55,20 @@ function Choice_2() {
     # echo "..."
     # echo "{{navigation.settings.exitKey}} - Exit"
     echo "exit - Exit"
-    # read -e -p "{{navigation.options.choices[1].afterSelectionMessage}}" bmg_navigation_input_{{navigation.options.choices[1].entryKey}}
-    read -e -p "Opcja2. Wybierz opcję: "  bmg_navigation_input_2
-    # if [[ ! -z "$bmg_navigation_input_{{navigation.options.choices[1].entryKey}}" ]]; then
-    if [[ ! -z "$bmg_navigation_input_2" ]]; then
-            # if [[ $bmg_navigation_input_{{navigation.options.choices[1].entryKey}} = "{{navigation.options.choices[1].options.choices[0].entryKey}}" ]]; then
-            if [[ $bmg_navigation_input_2 = "1" ]]; then
+    # read -e -p "{{navigation.options.choices[1].afterSelectionMessage}}" bmg_choice_{{navigation.options.choices[1].entryKey}}
+    read -e -p "Opcja2. Wybierz opcję: "  bmg_choice_2
+    # if [[ ! -z "$bmg_choice_{{navigation.options.choices[1].entryKey}}" ]]; then
+    if [[ ! -z "$bmg_choice_2" ]]; then
+            # if [[ $bmg_choice_{{navigation.options.choices[1].entryKey}} = "{{navigation.options.choices[1].options.choices[0].entryKey}}" ]]; then
+            if [[ $bmg_choice_2 = "1" ]]; then
                 # Choice_{{navigation.options.choices[1].options.choices[0].entryKey}}}
                 Choice_1
-            # elif [[ $bmg_navigation_input_{{navigation.options.choices[1].entryKey}} = "{{navigation.options.choices[1].options.choices[1].entryKey}}" ]]; then
-            elif [[ $bmg_navigation_input_2 = "2" ]]; then
+            # elif [[ $bmg_choice_{{navigation.options.choices[1].entryKey}} = "{{navigation.options.choices[1].options.choices[1].entryKey}}" ]]; then
+            elif [[ $bmg_choice_2 = "2" ]]; then
                 # Choice_{{navigation.options.choices[1].options.choices[1].entryKey}}}
                 Choice_2
-            # elif [[ $bmg_navigation_input_{{navigation.options.choices[1].entryKey}} = "{{navigation.settings.exitKey}}" ]]; then
-            elif [[ $bmg_navigation_input_2 = "exit" ]]; then
+            # elif [[ $bmg_choice_{{navigation.options.choices[1].entryKey}} = "{{navigation.settings.exitKey}}" ]]; then
+            elif [[ $bmg_choice_2 = "exit" ]]; then
                 exit
             else
                 echo "Please choose an option"
